@@ -1,0 +1,18 @@
+body {
+    margin: 0%;
+    font-family: "SF Pro Text", sans-serif;
+    font-weight: bold;
+}
+
+.navbar-left svg {
+    width: 50;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left * {
+    padding: 10px;
+}
