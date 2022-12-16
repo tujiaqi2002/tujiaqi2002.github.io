@@ -5,7 +5,9 @@ body {
 }
 
 .navbar {
+  height: 80px;
   font-weight: bold;
+  font-size: 25px;
   display: flex;
 }
 
@@ -35,16 +37,12 @@ body {
 .navbar-right * {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
-}
-
-#homepageImg {
-  width: 50px;
+  padding: 5px;
 }
 
 .navbar-right img {
-  width: 32px;
-  height: 32px;
+  width: 50px;
+  height: 50px;
 }
 
 #dark-mode-button {
@@ -89,13 +87,13 @@ body {
   display: flex;
   flex-direction: column;
   bottom: 2%;
-  left: 1.5%;
+  left: 3%;
   position: absolute;
 }
 
 .sideLink * {
   font-family: "SF Pro Text", sans-serif;
-  font-size: 13px;
+  font-size: 20px;
   font-weight: bold;
   color: black;
   transition-duration: 0.3s;
@@ -106,6 +104,7 @@ body {
 }
 
 .personalSign {
+  height: 1000px;
   display: flex;
   justify-content: center;
   align-items: center;
