@@ -140,7 +140,7 @@ body {
 #intro-page {
   font-family: "SF Pro Text", sans-serif;
   background: #242424;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   position: fixed;
   z-index: index 100;
