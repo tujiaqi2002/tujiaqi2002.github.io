@@ -107,9 +107,10 @@ body {
   transition: ease-in-out 2s;
 }
 
-#sign {
-  animation: img-change 2s ease-in-out;
-}
+// #sign {
+//   animation: img-change 2s ease-in-out;
+// }
+
 .img-change {
   animation: img-change 0.5s;
   animation-direction: alternate;
@@ -120,6 +121,79 @@ body {
     opacity: 0;
   }
   to {
+    opacity: 1;
+  }
+}
+
+//intropage
+#intro-page {
+  font-family: "SF Pro Text", sans-serif;
+  background: #242424;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: index 100;
+  display: grid;
+  grid-template-rows: repeat(100, 1fr);
+  grid-template-columns: repeat(100, 1fr);
+  cursor: wait;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.intro-name {
+  grid-area: 35/1/-2/-2;
+  align-items: center;
+  justify-items: center;
+  font-family: "SF Pro Text", sans-serif;
+  font-size: clamp(100px, 100px + 10vw, 400px);
+  // font-size: 450px;
+  font-weight: bolder;
+  color: white;
+  display: grid;
+  animation: fade-in 0.3s ease-out;
+}
+
+.welcome-words {
+  grid-area: 10/50/14/95;
+  font-family: "SF Pro Text", sans-serif;
+  // font-size: clamp(7px, 5px + 4vw, 40px);
+  font-size: calc(1.5vh + 1.3vw);
+  font-weight: bolder;
+  color: white;
+  display: grid;
+  justify-items: end;
+  animation: fade-in 1s ease-out;
+}
+
+.intro-me {
+  grid-area: 50/8/52/30;
+  font-family: "SF Pro Text", sans-serif;
+  // font-size: clamp(5px, 5px + 1vw, 20px);
+  font-size: calc(1vh + 0.5vw);
+  font-weight: bolder;
+  color: white;
+  display: grid;
+
+  animation: fade-in 0.3s ease-out;
+}
+
+.intro-sign-img {
+  height: 100%;
+  min-height: 512px;
+  justify-self: center;
+
+  grid-area: 1/1/-1/-1;
+  animation: fade-in 1s ease-out;
+}
+
+@keyframes fade-in {
+  from {
+    transform: translate3d(0, 20px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
     opacity: 1;
   }
 }
