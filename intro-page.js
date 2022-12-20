@@ -10,6 +10,19 @@ var introSign = document.createElement("img");
 introSign.src = "/images/light-sign.png";
 introSign.classList.add("intro-sign-img");
 
+var WelcomeFirst = ["Hello~ 😊", "Hi! 👋", "你好! 😀", "Hey! 👈"];
+var WelcomeSecond = [
+  "Nice to meet you!",
+  "Welcome! 🎉",
+  "So glad you are here!",
+];
+var WelcomeThird = [
+  "Can't wait to see you!",
+  "My name is Jiaqi! 🫣",
+  "This is Tusu!",
+  "I am 屠苏 🍶",
+];
+
 for (let i = 0; i < 3; i++) {
   // introName[i] = document.createElement("div");
   introMe[i] = document.createElement("div");
@@ -23,14 +36,16 @@ for (let i = 0; i < 3; i++) {
     case 0: {
       // introName[i].innerText = "Jiaqi Tu";
       introMe[i].innerText = "Software Engineer";
-      welcomeWords[i].innerText = "Hey!";
+      welcomeWords[i].innerText =
+        WelcomeFirst[Math.floor(Math.random() * WelcomeFirst.length)];
       console.log(i);
       console.log(introMe[i]);
       break;
     }
     case 1: {
       introMe[i].innerText = "Toronto";
-      welcomeWords[i].innerText = "Nice to meet you!";
+      welcomeWords[i].innerText =
+        WelcomeSecond[Math.floor(Math.random() * WelcomeSecond.length)];
       console.log(i);
       console.log(introMe[i]);
       break;
@@ -40,7 +55,8 @@ for (let i = 0; i < 3; i++) {
       console.log(i);
       console.log(introMe[i]);
       introMe[i].innerText = "Canada";
-      welcomeWords[i].innerText = "Can't wait to see you!";
+      welcomeWords[i].innerText =
+        WelcomeThird[Math.floor(Math.random() * WelcomeThird.length)];
       break;
     }
   }
@@ -55,19 +71,19 @@ window.onload = () => {
   }, 0);
 
   setTimeout(() => {
-    introMe[1].style.setProperty("grid-area", "32/2/34/5");
+    introMe[1].style.setProperty("grid-area", "53/8/55/30");
     introPage.appendChild(introMe[1]);
   }, 500);
 
   setTimeout(() => {
-    introMe[2].style.setProperty("grid-area", "34/2/36/5");
+    introMe[2].style.setProperty("grid-area", "56/8/58/30");
     introPage.appendChild(introMe[2]);
-    welcomeWords[1].style.setProperty("grid-area", "10/8/13/11");
+    welcomeWords[1].style.setProperty("grid-area", "15/50/19/95");
     introPage.appendChild(welcomeWords[1]);
   }, 1000);
 
   setTimeout(() => {
-    welcomeWords[2].style.setProperty("grid-area", "13/8/16/11");
+    welcomeWords[2].style.setProperty("grid-area", "20/50/24/95");
     introPage.appendChild(welcomeWords[2]);
   }, 2000);
 
