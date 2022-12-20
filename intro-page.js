@@ -10,6 +10,7 @@ var introSign = document.createElement("img");
 introSign.src = "/images/light-sign.png";
 introSign.classList.add("intro-sign-img");
 
+document.getElementsByTagName("body")[0].style.overflow = "hidden";
 var WelcomeFirst = ["Hello~ 😊", "Hi! 👋", "你好! 😀", "Hey! 👈"];
 var WelcomeSecond = [
   "Nice to meet you!",
@@ -89,5 +90,6 @@ window.onload = () => {
 
   setInterval(() => {
     introPage.style.display = "none";
+    document.getElementsByTagName("body")[0].style.removeProperty(overflow);
   }, 3000333);
 };
