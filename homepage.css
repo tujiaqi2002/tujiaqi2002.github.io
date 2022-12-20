@@ -148,6 +148,8 @@ body {
   grid-template-rows: repeat(100, 1fr);
   grid-template-columns: repeat(100, 1fr);
   cursor: wait;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .intro-name {
