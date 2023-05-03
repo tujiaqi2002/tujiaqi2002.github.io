@@ -25,7 +25,7 @@ function themeChange() {
   darkMode = !darkMode;
   if (darkMode) {
     //set darkmode properties
-    body.style.background = "#242424";
+    body.style.background = "#181817";
     body.style.color = "#e0dede";
 
     link.forEach((a) => {
@@ -69,16 +69,4 @@ function themeChange() {
   }
 }
 
-// const themeButton = document.getElementById("dark-mode-button");
-// themeButton.addEventListener("click", themeChange);
-
-// function setTheme() {
-//   switch (theme) {
-//     case "dark":
-//       setDark();
-//       break;
-//     case "light":
-//       setLight();
-//       break;
-//   }
-// }
+//intro-page
