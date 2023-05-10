@@ -1,0 +1,83 @@
+body
+  margin: 0%
+  font-family: -system-ui,sans-serif
+  transition: 0.5s
+
+//navbar
+.navbar
+  height: 10vmin
+  display: flex
+
+  &-left svg
+    width: 5vmin
+    height: 5vmin
+
+  &-left
+    display: flex
+    align-items: center
+    flex-grow: 1
+    gap: 5vmin
+  *
+    font-weight: 700
+    font-size: 1.1em
+
+//navbar right
+  &-right
+    display: flex
+    align-items: center
+
+#icon
+  width: 6vmin
+  height: 6vmin
+  padding: 2vmin
+
+#dark-mode-button
+  cursor: pointer
+  width: 6vmin
+  height: 6vmin
+  padding: 2vmin
+
+@keyframes theme-change
+  0%
+    transform: scale(1)
+
+  50%
+    transform: scale(1.1)
+
+  100%
+    transform: scale(1)
+
+.theme-change
+  animation-name: theme-change
+  animation-duration: 0.5s
+  animation-direction: alternate
+  animation-timing-function: ease-out
+
+.main-intro
+
+  font-weight: 700
+
+  &-name
+    font-size: 2.5em
+    display: flex
+    flex-direction: column
+    gap: 2vmin
+    padding-top: 5vmin
+    padding-left: 5vmin
+
+  &-self
+    font-size: 1em
+    padding-top: 5vmin
+    padding-left: 5vmin
+
+  &-links
+    display: flex
+    padding-top: 1vmin
+    padding-left: 5vmin
+    padding-bottom: 1vmin
+
+    a
+      text-decoration: none
+      color: #181817
+      padding-top: 1vmin
+      

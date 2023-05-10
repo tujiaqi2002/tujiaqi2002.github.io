@@ -1,64 +1,39 @@
 body {
   margin: 0%;
-  font-family: "SF Pro Text", sans-serif;
+  font-family: -system-ui, sans-serif;
   transition: 0.5s;
 }
 
 .navbar {
-  height: 80px;
-  font-weight: bold;
-  font-size: 25px;
+  height: 10vmin;
   display: flex;
 }
-
 .navbar-left svg {
-  width: 50;
+  width: 5vmin;
+  height: 5vmin;
 }
-
 .navbar-left {
   display: flex;
   align-items: center;
   flex-grow: 1;
+  gap: 5vmin;
+}
+.navbar * {
+  font-weight: 700;
+  font-size: 1.1em;
 }
 
-.navbar-left a {
-  text-decoration: none;
-}
-
-.navbar-left * {
-  padding: 10px;
-}
-
-.navbar-right {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-right * {
-  display: flex;
-  justify-content: space-between;
-  padding: 5px;
-}
-
-.navbar-right img {
-  width: 50px;
-  height: 50px;
+#icon {
+  width: 6vmin;
+  height: 6vmin;
+  padding: 2vmin;
 }
 
 #dark-mode-button {
   cursor: pointer;
-}
-
-@-webkit-keyframes theme-change {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
+  width: 6vmin;
+  height: 6vmin;
+  padding: 2vmin;
 }
 
 @keyframes theme-change {
@@ -73,148 +48,36 @@ body {
   }
 }
 .theme-change {
-  -webkit-animation-name: theme-change;
-          animation-name: theme-change;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+  animation-name: theme-change;
+  animation-duration: 0.5s;
+  animation-direction: alternate;
+  animation-timing-function: ease-out;
 }
 
-.sideLink {
+.main-intro {
+  font-weight: 700;
+}
+.main-intro-name {
+  font-size: 2.5em;
   display: flex;
   flex-direction: column;
-  bottom: 2%;
-  left: 3%;
-  position: absolute;
+  gap: 2vmin;
+  padding-top: 5vmin;
+  padding-left: 5vmin;
 }
-
-.sideLink * {
-  font-family: "SF Pro Text", sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-  color: black;
-  transition-duration: 0.3s;
+.main-intro-self {
+  font-size: 1em;
+  padding-top: 5vmin;
+  padding-left: 5vmin;
 }
-.sideLink *:hover {
-  opacity: 0.9;
-  color: #555555;
-}
-
-.personalSign {
-  height: 1000px;
+.main-intro-links {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: ease-in-out 2s;
+  padding-top: 1vmin;
+  padding-left: 5vmin;
+  padding-bottom: 1vmin;
 }
-
-.img-change {
-  -webkit-animation: img-change 0.5s;
-          animation: img-change 0.5s;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-}
-
-@-webkit-keyframes img-change {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes img-change {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-#intro-page {
-  font-family: "SF Pro Text", sans-serif;
-  background: #242424;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  z-index: index 100;
-  display: grid;
-  grid-template-rows: repeat(100, 1fr);
-  grid-template-columns: repeat(100, 1fr);
-  cursor: wait;
-  overflow-y: hidden;
-  overflow-x: hidden;
-}
-
-.intro-name {
-  grid-area: 35/1/-2/-2;
-  align-items: center;
-  justify-items: center;
-  font-family: "SF Pro Text", sans-serif;
-  font-size: clamp(100px, 100px + 10vw, 400px);
-  font-weight: bolder;
-  color: white;
-  display: grid;
-  -webkit-animation: fade-in 0.3s ease-out;
-          animation: fade-in 0.3s ease-out;
-}
-
-.welcome-words {
-  grid-area: 10/50/14/95;
-  font-family: "SF Pro Text", sans-serif;
-  font-size: calc(1.5vh + 1.3vw);
-  font-weight: bolder;
-  color: white;
-  display: grid;
-  justify-items: end;
-  -webkit-animation: fade-in 1s ease-out;
-          animation: fade-in 1s ease-out;
-}
-
-.intro-me {
-  grid-area: 50/8/52/30;
-  font-family: "SF Pro Text", sans-serif;
-  font-size: calc(1vh + 0.5vw);
-  font-weight: bolder;
-  color: white;
-  display: grid;
-  -webkit-animation: fade-in 0.3s ease-out;
-          animation: fade-in 0.3s ease-out;
-}
-
-.intro-sign-img {
-  height: 100%;
-  min-height: 512px;
-  justify-self: center;
-  grid-area: 1/1/-1/-1;
-  -webkit-animation: fade-in 1s ease-out;
-          animation: fade-in 1s ease-out;
-}
-
-@-webkit-keyframes fade-in {
-  from {
-    transform: translate3d(0, 20px, 0);
-    opacity: 0;
-  }
-  to {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-}
-
-@keyframes fade-in {
-  from {
-    transform: translate3d(0, 20px, 0);
-    opacity: 0;
-  }
-  to {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
+.main-intro-links a {
+  text-decoration: none;
+  color: #181817;
+  padding-top: 1vmin;
 }/*# sourceMappingURL=homepage.css.map */
