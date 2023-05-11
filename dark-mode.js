@@ -11,7 +11,7 @@ const body = document.getElementsByTagName('body')[0];
 const themeButton = document.getElementById('dark-mode-button');
 themeButton.addEventListener('click', themeChange);
 const icon = document.getElementById('icon');
-
+const links = document.querySelectorAll('a');
 
 //dark mode theme change
 function themeChange() {
@@ -30,9 +30,14 @@ function themeChange() {
       themeButton.classList.remove('theme-change');
       icon.classList.remove('img-change');
     }, 300);
-  
+
     themeButton.classList.add('theme-change');
     icon.classList.add('img-change');
+
+    // Loop through the NodeList and set the color
+    for (let i = 0; i < links.length; i++) {
+      links[i].style.color = '#e0dede';
+    }
   } else {
     body.style.background = 'white';
     body.style.color = 'black';
@@ -47,5 +52,10 @@ function themeChange() {
     }, 300);
     themeButton.classList.add('theme-change');
     icon.classList.add('img-change');
+
+    // Loop through the NodeList and set the color
+    for (let i = 0; i < links.length; i++) {
+      links[i].style.color = '#181817';
+    }
   }
 }
