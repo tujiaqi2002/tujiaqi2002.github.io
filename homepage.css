@@ -2,17 +2,11 @@ body {
   margin: 0%;
   font-family: -system-ui, sans-serif;
   transition: 0.5s;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.container {
-  max-width: 1280px;
-}
-
 .navbar {
-  width: 1280px;
   display: flex;
 }
 .navbar-left svg {
@@ -100,22 +94,30 @@ body {
   transition: 0.5s;
 }
 .main-intro-projects {
-  width: 1080px;
   display: flex;
   flex-direction: column;
   padding-top: 80px;
   padding-left: 48px;
+  padding-right: 48px;
   font-size: 16px;
   gap: 10px;
+  height: 500px;
 }
 .main-intro-projects-showcase {
   display: flex;
   flex-direction: row;
+  flex-flow: wrap;
   justify-content: space-between;
 }
 .main-intro-projects-showcase h2 {
-  display: flex;
-  flex-direction: row;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  line-height: 100px;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
 }
 .main-intro-projects a {
   text-decoration: none;
