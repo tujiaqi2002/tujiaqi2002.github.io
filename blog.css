@@ -9,14 +9,14 @@ body {
 
 /* Full viewport height for each blog post */
 .blog-post {
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     background-color: #f5f5f5;
     opacity: 0;
-    transform: translateY(100px);
+    /* transform: translateY(100px); */
     transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
@@ -66,6 +66,7 @@ body {
 
 h2 {
     font-size: 2.5rem;
+    margin: 10px;
     /* color: #333; */
 }
 
@@ -78,27 +79,57 @@ p {
     /* color: #666; */
 }
 
+.blog-post {
+    scroll-snap-align: start;
+    /* Aligns the start of the section with the top of the viewport */
+    height: 80vh;
+    /* Full-screen height for each blog post */
+    opacity: 0;
+    /* Start slightly off-screen */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
 /* Activate the post as it becomes visible */
 .blog-post.active {
     opacity: 1;
     transform: translateY(0);
-    transition: 0.5s;
+    /* Return to original position */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    /* Smooth transition */
+}
+
+.blog-section {
+    margin: 5px;
+    height: 80vh;
+    /* 100% of the viewport height */
+    scroll-snap-type: y mandatory;
+    /* Enable scroll snapping */
+    overflow-y: scroll;
+    /* Enable vertical scrolling */
 }
 
 /* Blog background colors to differentiate posts */
 .post-1 {
+    height: 80vh;
+    scroll-snap-align: start;
     background-color: #dcdcdc;
 }
 
 .post-2 {
+    height: 80vh;
+    scroll-snap-align: start;
     background-color: #f4f4f4;
 }
 
 .post-3 {
+    height: 80vh;
+    scroll-snap-align: start;
     background-color: #eaeaea;
 }
 
 .post-4 {
+    height: 80vh;
+    scroll-snap-align: start;
     background-color: #d1d1d1;
 }
 

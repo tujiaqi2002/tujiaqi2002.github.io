@@ -1,3 +1,5 @@
+const blogContainer = document.querySelector('.blog-section');
+blogContainer.style.scrollBehavior = 'smooth';
 // JavaScript to handle scrolling animations
 document.addEventListener('DOMContentLoaded', () => {
   const posts = document.querySelectorAll('.blog-post');
